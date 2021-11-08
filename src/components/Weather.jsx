@@ -7,6 +7,8 @@ export const Weather = () => {
 
     const [weatherColombo, setWeatherColombo] = useState({});
     const [weatherInfColombo, setWeatherInfColombo] = useState([0]);
+    const [mainWeatherData, setMainWeatherData] = useState([0]);
+    const [windData, setWindData] = useState([])
 
 
 
@@ -17,15 +19,17 @@ export const Weather = () => {
             .then(response => {
                 setWeatherColombo(response.data)
                 setWeatherInfColombo(response.data.weather)
+                setMainWeatherData(response.data.main)
+                setWindData(response.data.wind)
             })
     }, [curruntWeatherUrl])
 
-  
 
 
 
-     console.log(weatherColombo);
-     console.log(weatherInfColombo);
+
+    console.log(weatherColombo);
+    console.log(windData);
 
 
     return (
@@ -40,13 +44,38 @@ export const Weather = () => {
                     </div>
 
                     <div className="row">
-                        <div className="col-lg-6">
+
+                        <div className="col-lg-4">
                             <div className="weather-card">
                                 <img src={` http://openweathermap.org/img/wn/${weatherInfColombo[0].icon}.png `} />
                                 <h3>{weatherInfColombo[0].main}</h3>
                                 <p>{weatherInfColombo[0].description}</p>
                             </div>
                         </div>
+
+                        <div className="col-lg-4">
+                            <div className="main-weather-card">
+                                <div>
+                                    <h3>{mainWeatherData.temp}</h3>
+                                    <p>Temperature</p>
+                                </div>
+                                <div>
+                                    <h3>{mainWeatherData.feels_like}</h3>
+                                    <p>Feels Like</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="col-lg-4">
+                            <div className="wind-weather-card">
+                                <h4>Deg: {windData.deg}</h4>
+                                <h4>Speed: {windData.speed}</h4>
+                            </div>
+                        </div>
+
+
+
                     </div>
 
 
