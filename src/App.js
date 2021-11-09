@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './App.css';
 import { HomeComponent } from "./components/Home";
+import { SearchWeather } from "./components/SearchWeather";
 import { Weather } from './components/Weather';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
             <Route exact path="/">
               <HomeComponent />
+              <SearchWeather />
             </Route>
 
 
