@@ -38,7 +38,7 @@ export const Weather = () => {
             <section className="weather-cards-sec">
                 <div className="container">
                     <div className="row text-center">
-                        <div className="col-lg-12">
+                        <div className="col-lg-12 main-title-sec">
                             <h4>Weather Information -  {weatherColombo.name} </h4>
                         </div>
                     </div>
@@ -47,9 +47,11 @@ export const Weather = () => {
 
                         <div className="col-lg-4">
                             <div className="weather-card">
-                                <img src={` http://openweathermap.org/img/wn/${weatherInfColombo[0].icon}.png `} />
-                                <h3>{weatherInfColombo[0].main}</h3>
-                                <p>{weatherInfColombo[0].description}</p>
+                                <div>
+                                    <img src={` http://openweathermap.org/img/wn/${weatherInfColombo[0].icon}.png `} />
+                                    <h3>{weatherInfColombo[0].main}</h3>
+                                    <p>{weatherInfColombo[0].description}</p>
+                                </div>
                             </div>
                         </div>
 
@@ -69,8 +71,11 @@ export const Weather = () => {
 
                         <div className="col-lg-4">
                             <div className="wind-weather-card">
-                                <h4>Deg: {windData.deg}</h4>
-                                <h4>Speed: {windData.speed}</h4>
+                                <div>
+                                    <h3>Wind</h3>
+                                    <p>Deg: <strong> {windData.deg}</strong></p>
+                                    <p>Speed: <strong>{windData.speed}</strong></p>
+                                </div>
                             </div>
                         </div>
 
