@@ -87,9 +87,26 @@ body {
     border-radius: 5px;
     box-shadow: inset 0px -2px 16px -6px #701010;
     text-decoration: none !important;
+    margin: 0 10px;
 }
 
 .nav-card{
     text-align: center;
     margin-bottom: 50px;  
+}
+
+.pd-main-image{
+    text-align: center;
+}
+
+
+.pd-main-image img{
+    width: 60%;
+    border-radius: 22px;
+}
+
+
+.pd-home-main-title{
+    font-size: 50px;
+    margin-bottom: 50px;
 }
