@@ -68,13 +68,28 @@ body {
     font-size: 35px;
     margin-bottom: 60px;
     text-transform: uppercase;
-    border: 5 px solid #262626;
-    padding: 15 px 70 px;
+    border: 5px solid #262626;
+    padding: 15px 70px;
     display: inline-block;
-    border-radius: 10 px;
+    border-radius: 10px;
     box-shadow: inset 0px -2px 16px -6px #e3e3e3;
 }
 
 .main-weather-card p {
     margin: 0;
+}
+
+.nav-card a {
+    color: #ffffffb8;
+    border: 1px solid black;
+    padding: 5px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: inset 0px -2px 16px -6px #701010;
+    text-decoration: none !important;
+}
+
+.nav-card{
+    text-align: center;
+    margin-bottom: 50px;  
 }
