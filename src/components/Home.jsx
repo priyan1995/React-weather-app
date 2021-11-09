@@ -16,7 +16,7 @@ export const HomeComponent = () => {
 
                         <div className="col-12">
                             <div className="pd-main-image">
-                                <img src={ThunderImage} />
+                                <img src={ThunderImage}  alt="home-weather-image"/>
                             </div>
                         </div>
 
