@@ -1,47 +1,58 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, black, #626262);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+}
+
+* {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
 .weather-card {
     text-align: center;
     background: #7a7a7a;
     padding: 10px;
     border-radius: 5px;
-    min-height:155px;
+    min-height: 155px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main-weather-card{
+.main-weather-card {
     text-align: center;
-    background: #bc4747;
+    background: #203e5c;
     padding: 10px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height:155px;
+    min-height: 155px;
 }
 
-.wind-weather-card{
+.wind-weather-card {
     text-align: center;
-    background: #b46e25;
+    background: #524040;
     padding: 10px;
     border-radius: 5px;
-    min-height:155px;
+    min-height: 155px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.wind-weather-card h3,.wind-weather-card p,
-.main-weather-card h3, .main-weather-card p,
-.weather-card h3, .weather-card p{
+.wind-weather-card h3, .wind-weather-card p, .main-weather-card h3, .main-weather-card p, .weather-card h3, .weather-card p {
     color: white;
 }
 
-.main-weather-card div{
+.main-weather-card div {
     padding: 15px;
 }
 
-.wind-weather-card p{
+.wind-weather-card p {
     margin: 0;
     display: inline-block;
     margin-right: 5px;
@@ -52,6 +63,18 @@
     margin-top: 10px;
 }
 
-.main-title-sec h4{
+.main-title-sec h4 {
     margin: 20px 0;
+    font-size: 35px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    border: 5 px solid #262626;
+    padding: 15 px 70 px;
+    display: inline-block;
+    border-radius: 10 px;
+    box-shadow: inset 0px -2px 16px -6px #e3e3e3;
+}
+
+.main-weather-card p {
+    margin: 0;
 }
