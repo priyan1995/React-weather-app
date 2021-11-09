@@ -40,18 +40,22 @@ export const SearchWeather = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 text-center">
-                            <input
-                                type="text"
-                                placeholder="Search City"
-                                value={searchWeather}
-                                onChange={(e) => setSearchWeather(e.target.value)}
-                                className="pd-main-seach-weather" />
+                            <div className="pd-search-inp">
+                                <input
+                                    type="text"
+                                    placeholder="Search City"
+                                    value={searchWeather}
+                                    onChange={(e) => setSearchWeather(e.target.value)}
+                                    className="pd-main-seach-weather" />
 
-                            <button type="submit" onClick={HandleSearch}>Find</button>
+                                <button type="submit" onClick={HandleSearch}>Find</button>
+                            </div>
                         </div>
 
                         <div className="col-12 text-center pd-not-found ">
                             <p> {errorNotFound}</p>
+
+                            
                         </div>
 
                     </div>

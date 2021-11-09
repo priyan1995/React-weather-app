@@ -111,15 +111,40 @@ body {
 
 .pd-main-seach-weather {
     background: transparent;
-    margin-top: 50px;
-    width: 60%;
     padding: 10px 20px;
     border-radius: 31px;
     box-shadow: inset 0px 0px 19px -7px #979797;
     color: white;
     border: 2px solid gray;
+    height: 50px;
+    width: 75%;
+
 }
 
-input:focus{
+input:focus {
     outline: none;
+}
+
+.pd-not-found p {
+    margin-top: 24px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.pd-search-inp {
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+ .pd-search-inp button   {
+    margin-left: 10px;
+    background: #2e2e2e;
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    min-width: 20%;
+    height: 50px;
 }
