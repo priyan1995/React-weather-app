@@ -13,9 +13,15 @@ export const SearchWeather = () => {
 
     const [errorNotFound, setErrorNotFound] = useState('');
 
+    const [issettedWeather, setIsWeather] = useState(false);
+
+    const [weatherInfoInputtedCity, setWeatherInfoInputtedCity] = useState([]);
+
     const resetError = () => {
         setErrorNotFound('');
     }
+
+  
 
     //console.log(url);
 
@@ -23,16 +29,21 @@ export const SearchWeather = () => {
 
         axios.get(url)
             .then(response => {
-                console.log(response.data)
-                resetError()
+                //console.log(response.data)
+                resetError();
+                setInputWeather(response.data);
+                setWeatherInfoInputtedCity(response.data.weather)
+                setIsWeather(true);
             })
             .catch(function (error) {
                 if (error.response) {
-                    setErrorNotFound('City Not Found')
+                    setErrorNotFound('City Not Found');
+                    setIsWeather(false);
                 }
             })
     }
 
+    console.log(inputWeather);
 
     return (
         <>
@@ -55,7 +66,33 @@ export const SearchWeather = () => {
                         <div className="col-12 text-center pd-not-found ">
                             <p> {errorNotFound}</p>
 
-                            
+                            {issettedWeather ? (
+                                <>
+                                    <div>
+
+                                        <h3>{inputWeather.name}</h3>                                        
+                                        <img src={` http://openweathermap.org/img/wn/${weatherInfoInputtedCity[0].icon}.png `} />
+                                        <h4>{weatherInfoInputtedCity[0].main}</h4>
+                                        <p>{weatherInfoInputtedCity[0].description}</p> 
+
+
+
+                                    </div>
+                                </>
+
+                            ) : (
+                                <>
+
+                                </>
+                            )}
+
+
+
+
+
+
+
+
                         </div>
 
                     </div>
